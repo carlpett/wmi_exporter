@@ -1,0 +1,197 @@
+address_book_operations_total{operation}
+  ABANRPersec             ambiguous_name_resolution
+  ABBrowsesPersec         browse
+  ABMatchesPersec         find
+  ABPropertyReadsPersec   property_read
+  ABSearchesPersec        search
+  ABProxyLookupsPersec    proxy_search
+
+address_book_client_sessions
+  ABClientSessions
+
+approximate_highest_distinguished_name_tag
+  ApproximatehighestDNT
+
+ATQEstimatedQueueDelay
+ATQOutstandingQueuedRequests
+ATQRequestLatency
+ATQThreadsLDAP
+ATQThreadsOther
+ATQThreadsTotal
+
+searches_total{scope}
+  BasesearchesPersec      base
+  SubtreesearchesPersec   subtree
+  OnelevelsearchesPersec  one_level
+
+database_operations_total{operation}
+  DatabaseaddsPersec      add
+  DatabasedeletesPersec   delete
+  DatabasemodifysPersec   modify
+  DatabaserecyclesPersec  recycle
+
+binds_total{?}
+  DigestBindsPersec
+  DSClientBindsPersec
+  DSServerBindsPersec
+  ExternalBindsPersec
+  FastBindsPersec
+  NegotiatedBindsPersec
+  NTLMBindsPersec
+  SimpleBindsPersec
+
+# DRA = directory replication agent
+# DSA = directory system agent
+replication_highest_usn{}
+  DRAHighestUSNCommittedHighpart  committed
+  DRAHighestUSNCommittedLowpart
+  DRAHighestUSNIssuedHighpart     issued
+  DRAHighestUSNIssuedLowpart
+
+replication_data_bytes_total{direction, relation}
+  DRAInboundBytesCompressedBetweenSitesAfterCompressionPersec   inbound,between_sites
+  DRAInboundBytesCompressedBetweenSitesBeforeCompressionPersec  inbound,between_sites
+  DRAInboundBytesNotCompressedWithinSitePersec                  inbound,within_site
+  DRAOutboundBytesCompressedBetweenSitesAfterCompressionPersec  outbound,between_sites
+  DRAOutboundBytesCompressedBetweenSitesBeforeCompressionPersec outbound,between_sites
+  DRAOutboundBytesNotCompressedWithinSitePersec                 outbound,within_site
+
+
+DRAInboundFullSyncObjectsRemaining
+DRAInboundLinkValueUpdatesRemaininginPacket
+DRAInboundObjectsAppliedPersec
+DRAInboundObjectsFilteredPersec
+DRAInboundObjectsPersec
+DRAInboundObjectUpdatesRemaininginPacket
+DRAInboundPropertiesAppliedPersec
+DRAInboundPropertiesFilteredPersec
+DRAInboundPropertiesTotalPersec
+DRAInboundTotalUpdatesRemaininginPacket
+DRAInboundValuesDNsonlyPersec
+DRAInboundValuesTotalPersec
+DRAOutboundObjectsFilteredPersec
+DRAOutboundObjectsPersec
+DRAOutboundPropertiesPersec
+DRAOutboundValuesDNsonlyPersec
+DRAOutboundValuesTotalPersec
+DRAPendingReplicationOperations
+DRAPendingReplicationSynchronizations
+DRASyncFailuresonSchemaMismatch
+DRASyncRequestsMade
+DRASyncRequestsSuccessful
+DRAThreadsGettingNCChanges
+DRAThreadsGettingNCChangesHoldingSemaphore
+
+directory_operations_total{operation}
+  DSDirectoryReadsPersec    read
+  DSDirectorySearchesPersec search
+  DSDirectoryWritesPersec   write
+
+name_translations_total{target_name}
+  DSClientNameTranslationsPersec  client
+  DSServerNameTranslationsPersec  server
+
+DSMonitorListSize
+
+DSNameCachehitrate
+
+DSNotifyQueueSize
+
+directory_operations_total{operation, origin}
+  DSPercentReadsfromDRA         read,replication_agent
+  DSPercentReadsfromKCC         read,knowledge_consistency_checker
+  DSPercentReadsfromLSA         read,local_security_authority
+  DSPercentReadsfromNSPI        read,name_service_provider_interface
+  DSPercentReadsfromNTDSAPI     read,directory_service_api
+  DSPercentReadsfromSAM         read,security_account_manager
+  DSPercentReadsOther           read,other
+
+  DSPercentSearchesfromDRA      search,replication_agent
+  DSPercentSearchesfromKCC      search,knowledge_consistency_checker
+  DSPercentSearchesfromLDAP     search,ldap
+  DSPercentSearchesfromLSA      search,local_security_authority
+  DSPercentSearchesfromNSPI     search,name_service_provider_interface
+  DSPercentSearchesfromNTDSAPI  search,directory_service_api
+  DSPercentSearchesfromSAM      search,security_account_manager
+  DSPercentSearchesOther        search,other
+
+  DSPercentWritesfromDRA        write,replication_agent
+  DSPercentWritesfromKCC        write,knowledge_consistency_checker
+  DSPercentWritesfromLDAP       write,ldap
+  DSPercentWritesfromLSA        write,local_security_authority
+  DSPercentWritesfromNSPI       write,name_service_provider_interface
+  DSPercentWritesfromNTDSAPI    write,directory_service_api
+  DSPercentWritesfromSAM        write,security_account_manager
+  DSPercentWritesOther          write,other
+
+directory_search_suboperations_total
+  DSSearchsuboperationsPersec
+
+DSSecurityDescriptorPropagationsEvents
+DSSecurityDescriptorPropagatorAverageExclusionTime
+DSSecurityDescriptorPropagatorRuntimeQueue
+DSSecurityDescriptorsuboperationsPersec
+
+directory_service_threads
+  DSThreadsinUse
+
+# How to name/label? Raw data is counters
+ldap_connections_total{?}
+  LDAPClosedConnectionsPersec
+  LDAPNewConnectionsPersec
+  LDAPNewSSLConnectionsPersec
+
+
+LDAPActiveThreads
+LDAPBindTime
+LDAPClientSessions
+LDAPSearchesPersec
+LDAPSuccessfulBindsPersec
+LDAPUDPoperationsPersec
+LDAPWritesPersec
+
+link_values_cleaned_total
+  LinkValuesCleanedPersec
+
+# Merge these?
+phantom_objects_cleaned_total
+  PhantomsCleanedPersec
+phantom_objects_visited_total
+  PhantomsVisitedPersec
+
+sam_group_membership_evaluations_total{group_type}
+  SAMGlobalGroupMembershipEvaluationsPersec       global
+  SAMDomainLocalGroupMembershipEvaluationsPersec  domain_local
+  SAMUniversalGroupMembershipEvaluationsPersec    universal
+sam_group_membership_global_catalog_evaluations_total
+  SAMGCEvaluationsPersec
+
+SAMNonTransitiveMembershipEvaluationsPersec
+SAMTransitiveMembershipEvaluationsPersec
+
+# The mean latency of the last 100 group evaluations performed for authentication.
+sam_group_evaluation_latency{evaluation_type}
+  SAMAccountGroupEvaluationLatency  account_group
+  SAMResourceGroupEvaluationLatency resource_group
+
+SAMSuccessfulComputerCreationsPersecIncludesallrequests
+SAMMachineCreationAttemptsPersec
+
+SAMDisplayInformationQueriesPersec
+SAMEnumerationsPersec
+SAMMembershipChangesPersec
+SAMPasswordChangesPersec
+SAMSuccessfulUserCreationsPersec
+SAMUserCreationAttemptsPersec
+
+tombstoned_objects_collected_total
+  TombstonesGarbageCollectedPersec
+tombstoned_objects_visited_total
+  TombstonesVisitedPersec
+
+# No idea what this is
+transitive_operations_evaluation_time_total
+  Transitiveoperationsmillisecondsrun
+transitive_operations_total{op_type}
+  TransitiveoperationsPersec    operation
+  TransitivesuboperationsPersec suboperation
